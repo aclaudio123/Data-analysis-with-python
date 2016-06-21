@@ -6,9 +6,9 @@ import unicodecsv
 
 def read_csv(filename):
     '''
-    function to read csv file
+    create a function to read csv file
     input : .csv tables
-    output : list of table data
+    output : return list of table data
     '''
     with open(filename, 'rb') as f:
         reader = unicodecsv.DictReader(f)
@@ -18,13 +18,14 @@ enrollments = read_csv('enrollments.csv')
 daily_engagement = read_csv('daily_engagement.csv')
 project_submissions = read_csv('project_submissions.csv')
 
-# Print out number of rows in each table
-# number of rows
+# Here I'm printing out number of rows in each table
+    # number of rows
 print len(enrollments)
 print len(daily_engagement)
 print len(project_submissions)
 
-print
+print           # extra line spacing
+
 # finding number of unique students in each table
     # enrollment table
 unique_enrolled_students = set()
